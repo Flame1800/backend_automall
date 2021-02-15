@@ -1,7 +1,7 @@
 `use strict`
 
-const responce = require('../responce')
+const response = require('../response')
 
 exports.index = (req, res) => {
-    responce.status('Hello REST API NODEJS', res)
+    response.status('Hello REST API NODEJS', res)
 }
