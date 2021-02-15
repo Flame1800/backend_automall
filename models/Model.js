@@ -3,9 +3,13 @@ module.exports = (sequelize, DataTypes) => {
         title: {
             type: DataTypes.STRING,
             allowNull: true,
+        },
+        mark_id: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
         }
     }, {
-        timestamps: false
+        timestamps: false,
     });
 
     return Model;

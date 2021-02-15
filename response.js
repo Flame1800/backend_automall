@@ -1,11 +1,11 @@
 `use strict`
 
-exports.status = (code, data, res) => {
+exports.status = (code, response, res) => {
     const result = {
         status: 'succes',
         errorcode: 0,
         message: 'ok',
-        data
+        response
     }
 
     res.status(code)

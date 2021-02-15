@@ -15,10 +15,6 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.INTEGER,
             allowNull: false,
         },
-        mark_id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-        },
         year: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -29,7 +25,7 @@ module.exports = (sequelize, DataTypes) => {
         },
         mileage: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
         },
         user_id: {
             type: DataTypes.INTEGER,

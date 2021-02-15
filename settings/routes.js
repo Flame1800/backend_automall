@@ -1,15 +1,18 @@
 `use strict`
 
 module.exports = (app) => {
-    const indexController = require('../Controller/IndexController')
     const userController = require('../Controller/UserController')
-
-    app.route('/').get(indexController.index)
-    app.route('/users').get(userController.users)
-    app.route('/user/add').post(userController.add)
+    const autoController = require('../Controller/AutoController')
+    const markController = require('../Controller/MarkController')
 
     app.route('/user/auth').post(userController.sendCode)
     app.route('/user/login').post(userController.login)
     app.route('/user/:id').get(userController.find)
     app.route('/user/:id').put(userController.update)
+
+    app.route('/user/:id/auto').post(autoController.add)
+    app.route('/auto/:id').put(autoController.update)
+
+    app.route('/autolist').get(markController.index)
+
 }
